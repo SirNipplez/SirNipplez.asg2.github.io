@@ -1,0 +1,167 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet"/>
+    <link href="css/color.css" rel="stylesheet"/>
+    <link rel="icon" href="image/JtraxIcon.png">
+    <script src="json/artists.json"></script> 
+    <script src="json/genres.json"></script> 
+    <script src="json/sample-songs.json"></script> 
+    <script src="js/assign2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title >Jaunty Trax</title>
+</head>
+<body>
+    <header id="titleBanner">
+        <div id="icon"><img id="iconPic" src="image/JtraxIcon.png"></div>
+        <div id="title"><h1>Jaunty Trax</h1></div>
+        
+        <div id="headerButtons">
+            <button class="hButton" id="searchButton">Search</button>
+            <button class="hButton" id="playlistButton">Playlist</button>
+            <button class="hButton" id="creditButton">
+                Credits 
+                <span class="credits">
+                    <p>Damon Irwin</p>
+                    <p>Brandon Kern</p>
+                    <a href="">Github Link</a></span>
+            </button>
+        </div>
+    
+    </header>
+
+
+
+    <div id="Home">
+        <div class="h1">
+            <table id="tGenre">
+                <thead>
+                    <th>Top Genres</th>
+                </thead>
+                <tbody>
+                    <tr>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+        <div class="h1">
+            <table id="tArtist">
+                <thead>
+                    <th>Top Artists</th>
+                </thead>
+                <tbody>
+                    <tr>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="h2">
+            <table  id="pSong">
+                <thead>
+                    <th>Most popular Songs</th>
+                </thead>
+                <tbody>
+                    <tr>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+
+
+
+    <div id="Search">
+        <form id="basicSongSearch">
+            <h2>Basic Song Search</h2>
+            <div>
+                <input type="radio" value="Title" id="Title" class="radioBttn" name="searchType" checked>
+                <label for "Title">Title</label>
+                <input id="Tsearch" name="search" type="text" placeholder="type here" class="forumBoxes">
+            </div>
+            <div>
+                <input type="radio" value="Artist" id="Artist" class="radioBttn" name="searchType">
+                <label for "Artist">Artist</label>
+                <select id="Afilter" name="filter" class="forumBoxes">
+                </select>
+            </div>
+            <div>
+                <input type="radio" value="Genre" id="Genre" class="radioBttn" name="searchType">
+                <label for "Genre">Genre</label>
+                <select id="Gfilter" name="filter" class="forumBoxes">
+                </select>
+            </div>
+            <div id="bssButtonDiv">
+                <button id ="clearButton" type="button">Clear</button>
+                <button id="filterButton" type="button">Filter</button>
+            </div>
+        </form>
+
+        <div id="searchResults">
+            <h2>Browse/Search Results</h2>
+            <table>
+                <thead>
+                    <th>Title <img id="tPic" class="listIcon" src="image/arrowdown.png"></th>
+                    <th>Artist <img id="aPic" class="listIcon" src="image/dot.png"></th>
+                    <th>Genre <img id="gPic" class="listIcon" src="image/dot.png"></th>
+                    <th>Year <img id="yPic" class="listIcon" src="image/dot.png"></th>
+                    <th></th>
+                </thead>
+                <tbody id="songsBody">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <div id="songDets">
+        <div id="songInfoDiv">
+            <h2>Song Infomation</h2>
+            <ul id="songInfo">
+            </ul>
+            <Header> Analysis Data </header>
+            <ul id="songDetails">
+            </ul>
+        </div>
+        <div id="radioChart">
+            <h2>Radio Chart</h2>
+            <div id="chartContainer">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+    <div id="playlist">
+        <div>
+            <h2>Playlist Details</h2>
+            <p id="playInfo"># songs, popularity</p>
+            <button id="clearPlaylist">Clear Playlist</button>
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <th>Title</th>
+                    <th>Artist</th>
+                    <th>Year</th>
+                    <th>Genre</th>
+                    <th>Popularity</th>
+                    <th></th>
+                </thead>
+                <tbody id="playlistBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Made by The "Funnies" People</p>
+    </footer>
+</body>
+</html>
